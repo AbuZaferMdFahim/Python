@@ -21,22 +21,22 @@ def loginPage(request):
         try:
             user = User.objects.get(username=username)
         except:
-            messages.error(request,'username is not exist')
+            messages.error(request,'Username does not exist')
 
-        user = authenticate(request, username=username,password=password)
+        user = authenticate(request, username=username, password=password)
 
 
         if user is not None:
-            login(request,user)
+            login(request, user)
             return redirect('profiles')
         else:
-            messages.error(request,'Username or Password in incorrect')
+            messages.error(request,'Username or Password is incorrect')
 
     return render(request, 'users/login_register.html')
 
 def logoutPage(request):
     logout(request)
-    messages.info(request,'User was logout')
+    messages.info(request,'User was logged out')
     return redirect('login')
 
 def registerPage(request):
@@ -58,7 +58,7 @@ def registerPage(request):
             messages.success(request,'Error Occured During Registration')
 
 
-    context = {'page': page,'form':form}
+    context = {'page': page, 'form':form}
     return render(request,'users/login_register.html',context)
 
 def profiles(requset):
@@ -74,3 +74,10 @@ def userprofile(request,pk):
 
     context = {'profile': profile,'topskills': topskills, "otherskills": otherskills}
     return render(request,'users/user-profile.html',context)
+
+@login_required(login_url='login')
+def userAccount(request):
+    profile = request.user.profile
+
+    context = {'profile': profile}
+    return render(request, 'users/account.html',context)
