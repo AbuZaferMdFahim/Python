@@ -8,7 +8,7 @@ from .forms import ProjectForm
 
 def projects(request):
     projects, search_query = searchProjects(request)
-    custom_range,projects = paginateProjects(request, projects,6)
+    custom_range,projects = paginateProjects(request, projects, 6)
 
     context = {'projects': projects, 'search_query': search_query, 'custom_range': custom_range}
     return render(request,'projects/project.html', context)
