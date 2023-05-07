@@ -31,19 +31,19 @@
 
                 {% if profile.social_youtube %}
                 <li>
-                  <a title="Youtube" href="{{profile.social_youtube}}" target="_blank"> {% static 'images/youtube.svg'%} <i class="im im-youtube"></i></a>
+                  <a title="Youtube" href="{{profile.social_youtube}}" target="_blank">  <img src="{% static 'images/youtube.svg'%}" alt="icon">  <i class="im im-youtube"></i></a>
                 </li>
                 {%endif%}
 
                 {% if profile.social_linkedin %}
                 <li>
-                  <a title="LinkedIn" href="{{profile.social_linkedin}}" target="_blank"> {% static 'images/linkedin.svg'%} <i class="im im-linkedin"></i></a>
+                  <a title="LinkedIn" href="{{profile.social_linkedin}}" target="_blank"> <img src="{% static 'images/linkedIn.svg'%}" alt="icon"> <i class="im im-linkedin"></i></a>
                 </li>
                 {%endif%}
 
                 {% if profile.social_website %}
                 <li>
-                  <a title="Personal Website" href="{{profile.social_website}}" target="_blank"><i class="im im-globe"> {% static 'images/website.svg'%} </i></a>
+                  <a title="Personal Website" href="{{profile.social_website}}" target="_blank"><i class="im im-globe"> <img src="{% static 'images/website.svg'%}" alt="icon"></i></a>
                 </li>
                 {%endif%}
 
