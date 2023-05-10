@@ -30,8 +30,4 @@ class ReviewForm(ModelForm):
         super(ReviewForm, self).__init__(*args, **Kwargs)
 
         for name, field in self.fields.items():
-<<<<<<< HEAD
             field.widget.attrs.update({'class': 'input'})
-=======
-            field.widget.attrs.update({'class': 'input'})
->>>>>>> 35901e8508b2cadaceb0b1eb1c98c37c77e1800f

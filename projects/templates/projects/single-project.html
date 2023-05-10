@@ -78,13 +78,15 @@
                 </a>
                 <div class="comment__details">
                   <a href="{% url 'user-profile' review.owner.id %}" class="comment__author">{{review.owner.name}}</a>
-<<<<<<< HEAD
+
                   <p class="comment__info">{{review.body|linebreaksbr}}</p>
-=======
+
                   <p class="comment__info">
                   {{review.body।linebreaksbr}}
                   </p>
->>>>>>> 35901e8508b2cadaceb0b1eb1c98c37c77e1800f
+
+                  <p class="comment__info">{{review.body|linebreaksbr}}</p> 
+
                 </div>
               </div>
 

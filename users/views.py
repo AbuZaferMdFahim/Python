@@ -151,8 +151,7 @@ def deleteSkill(request , pk):
 
     context = {'object': skill}
     return render(request, 'delete_template.html',context)
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 @login_required(login_url='login')
 def inbox(request):
@@ -198,8 +197,6 @@ def createMessage(request,pk):
             return redirect('user-profile',pk = recipient.id)
 
     context = {'recipient': recipient, 'form': form}
+
     return render(request, 'users/message_form.html',context)
-=======
->>>>>>> 35901e8508b2cadaceb0b1eb1c98c37c77e1800f
-=======
->>>>>>> 35901e8508b2cadaceb0b1eb1c98c37c77e1800f
+

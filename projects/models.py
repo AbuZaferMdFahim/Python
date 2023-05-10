@@ -63,8 +63,4 @@ class Tag(models.Model):
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)    
 
     def __str__(self):
-<<<<<<< HEAD
         return self.name
-=======
-        return self.name
->>>>>>> 35901e8508b2cadaceb0b1eb1c98c37c77e1800f
